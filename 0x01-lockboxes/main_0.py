@@ -2,6 +2,9 @@
 
 canUnlockAll = __import__('0-lockboxes').canUnlockAll
 
+
+print(canUnlockAll(None))
+
 boxes = [[1], [1]]
 print(canUnlockAll(boxes))
 
