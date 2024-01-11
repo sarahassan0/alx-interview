@@ -11,14 +11,11 @@ def canUnlockAll(boxes):
     visited = set()
 
     def dfs(box):
-        if box < len(boxes) :
-            visited.add(box)
-        else:
-            return
- 
+
+        visited.add(box)
 
         for key in boxes[box]:
-            if key not in visited:
+            if key < len(boxes) and key not in visited:
                 dfs(key)
 
     dfs(0)
