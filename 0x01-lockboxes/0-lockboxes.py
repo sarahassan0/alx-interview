@@ -7,9 +7,9 @@
 
 def canUnlockAll(boxes):
     """ Return True if all boxes can be opened, else return False """
-    if boxes == None:
+    if boxes is None:
         return False
-    
+
     visited = set()
 
     def dfs(box):
