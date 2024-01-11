@@ -19,4 +19,4 @@ def canUnlockAll(boxes):
 
     dfs(0)
 
-    return len(visited) == len(rooms)
+    return len(visited) == len(boxes)
