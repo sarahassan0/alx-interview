@@ -50,7 +50,7 @@ def minOperations_recursion(n, min=2):
 # the array and just accept to be divide only by itself
 
 
-def minOperations(n):
+def minOperations_itration(n):
     """
     minOperations
     @n: number of characters in the file
