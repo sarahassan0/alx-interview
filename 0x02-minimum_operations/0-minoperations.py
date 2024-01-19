@@ -46,27 +46,3 @@ def minOperations_recursion(n, min=2):
     else:
         return minOperations(n, min+1)
 
-# this sloution is works good but not when the n is not in
-# the array and just accept to be divide only by itself
-
-
-def minOperations_itration(n):
-    """
-    minOperations
-    @n: number of characters in the file
-    Return: minimum operations have be done to go from 1 to n
-    """
-    arr = [0, 0, 2, 3, 4, 5]
-    if n < len(arr):
-        return arr[n]
-    min = 0
-
-    for i in arr[::-1]:
-        if n % i == 0:
-            min += i
-            n = n // i
-
-            if n in arr:
-                min += n
-                break
-    return min
