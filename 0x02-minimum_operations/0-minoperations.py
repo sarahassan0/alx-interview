@@ -7,7 +7,7 @@ of operations needed to result in exactly n H characters in the file.
 """
 
 
-def minOperations(n, min=2):
+def minOperations2(n, min=2):
     """
     minOperations
     @n: number of characters in the file
@@ -25,3 +25,24 @@ def minOperations(n, min=2):
         return min + minOperations(n//min)
     else:
         return minOperations(n, min+1)
+
+def minOperations(n):
+    """
+    minOperations
+    @n: number of characters in the file
+    Return: minimum operations have be done to go from 1 to n
+    """
+    arr = [0, 0, 2, 3, 4, 5]
+    if n < len(arr):
+        return arr[n]
+    min = 0
+
+    for i in arr[::-1]:
+        if n % i == 0:
+            min += i
+            n = n // i
+
+            if n in arr:
+                min += n
+                break
+    return min
