@@ -14,3 +14,6 @@ def rotate_2d_matrix(matrix):
     # Revese each row after transpose the given matrix.
     for row in matrix:
         row.reverse()
+
+# More concise solution
+    # matrix[::] = [list(i) for i in zip(*matrix[::-1])]
